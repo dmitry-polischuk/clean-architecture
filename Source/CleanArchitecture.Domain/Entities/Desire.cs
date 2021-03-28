@@ -1,4 +1,5 @@
-﻿using CleanArchitecture.Domain.Interfaces;
+﻿using CleanArchitecture.Domain.Enums;
+using CleanArchitecture.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,8 @@ namespace CleanArchitecture.Domain.Entities
         public Guid DesireId { get; set; }
         public Guid UserId { get; set; }
         public string Name { get; set; }
+        public DateTimeOffset CreatedAt { get; set; }
+        public eDesireStatus Status { get; set; }
         public User User { get; set; }
 
         public bool CanBeMerged(Desire destination)

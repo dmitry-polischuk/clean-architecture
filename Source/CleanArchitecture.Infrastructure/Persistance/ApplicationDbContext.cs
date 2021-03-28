@@ -6,10 +6,11 @@ using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using CleanArchitecture.Application.Common.Interfaces;
 
 namespace CleanArchitecture.Infrastructure.Persistance
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : DbContext, IApplicationDbContext
     {
         public DbSet<Desire> Desires { get; set; }
         public DbSet<Device> Devices { get; set; }

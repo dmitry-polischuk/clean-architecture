@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using PushNotificationService.Application.Common.Authorization.Requirements;
+using CleanArchitecture.Application.Common.Authorization.Requirements;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PushNotificationService.Application.Common.Authorization.Handlers
+namespace CleanArchitecture.Application.Common.Authorization.Handlers
 {
     public class HasScopeHandler : AuthorizationHandler<HasScopeRequirement>
     {
