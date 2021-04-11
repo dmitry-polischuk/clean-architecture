@@ -13,12 +13,12 @@ namespace CleanArchitecture.Application.Quieries.Desire
     public class GetDesireQuery : IRequest<IList<DesireDto>>
     {
         public string UserId { get; set; }
-        public class GetRemindersQueryHandler : IRequestHandler<GetDesireQuery, IList<DesireDto>>
+        public class GetDesiresQueryHandler : IRequestHandler<GetDesireQuery, IList<DesireDto>>
         {
             private readonly IApplicationDbContext _context;
             private readonly IMapper _mapper;
 
-            public GetRemindersQueryHandler(IApplicationDbContext context, IMapper mapper)
+            public GetDesiresQueryHandler(IApplicationDbContext context, IMapper mapper)
             {
                 _context = context;
                 _mapper = mapper;
