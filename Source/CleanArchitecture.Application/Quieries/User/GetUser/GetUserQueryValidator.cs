@@ -1,12 +1,14 @@
 ﻿using CleanArchitecture.Application.Common.Strings;
-using CleanArchitecture.Application.Quieries.Desire;
 using FluentValidation;
+using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace PushNotificationService.Application.NotificationResponses.Queries.GetNotificationResponses
+namespace CleanArchitecture.Application.Quieries.User.GetUser
 {
-    public class GetDesiresQueryValidator : AbstractValidator<GetDesireQuery>
+    public class GetUserQueryValidator : AbstractValidator<GetUserQuery>
     {
-        public GetDesiresQueryValidator()
+        public GetUserQueryValidator()
         {
             RuleFor(x => x.UserId)
                 .NotEmpty().WithMessage(x => string.Format(ErrorStrings.PropertyMissing, nameof(x.UserId)))

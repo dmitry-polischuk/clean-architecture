@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CleanArchitecture.Application.Quieries
+namespace CleanArchitecture.Application.Quieries.User.GetUser
 {
     public class GetUserQuery : IRequest<UserDto>
     {
